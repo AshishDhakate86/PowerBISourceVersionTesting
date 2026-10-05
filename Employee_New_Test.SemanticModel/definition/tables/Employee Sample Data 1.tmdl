@@ -1,0 +1,150 @@
+table 'Employee Sample Data 1'
+	lineageTag: 47928112-07f1-4380-8398-fed2b740a944
+
+	column 'Employee ID'
+		dataType: string
+		lineageTag: 2fdf5faf-f2f4-4b47-ad00-2fdba55452fc
+		summarizeBy: none
+		sourceColumn: Employee ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Full Name'
+		dataType: string
+		lineageTag: 407108f0-bdce-4235-85be-cad7cd76c5a5
+		summarizeBy: none
+		sourceColumn: Full Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Job Title'
+		dataType: string
+		lineageTag: 572c12fc-6b57-445b-b91c-cf3eecf920ca
+		summarizeBy: none
+		sourceColumn: Job Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: 808b8427-b77c-4007-b10a-d78255aaee79
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Unit'
+		dataType: string
+		lineageTag: d7731881-efdd-4c37-b7d3-554d4fb7b1f4
+		summarizeBy: none
+		sourceColumn: Business Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 41684821-3df5-4b66-bb22-bb11b9429e71
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ethnicity
+		dataType: string
+		lineageTag: b284aa8f-8a25-48dd-bdb5-0d4dbf100dc7
+		summarizeBy: none
+		sourceColumn: Ethnicity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ad16ddc-bae7-4ae5-932b-05da19a5a0a2
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Hire Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7d56d200-a689-4375-9a0a-c53fa2222546
+		summarizeBy: none
+		sourceColumn: Hire Date
+
+		variation Variation
+			isDefault
+			relationship: 4d5e2a48-da04-4998-b9e1-46c533247c6e
+			defaultHierarchy: LocalDateTable_845c6a6c-2554-4eb3-be81-3f822e33baad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Annual Salary'
+		dataType: int64
+		formatString: 0
+		lineageTag: e1a3ed93-7bd3-4d1d-8ce2-9c5771809783
+		summarizeBy: sum
+		sourceColumn: Annual Salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bonus %'
+		dataType: double
+		lineageTag: ae8d778f-36e8-4f22-9908-ef2392f123da
+		summarizeBy: sum
+		sourceColumn: Bonus %
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Country
+		dataType: string
+		lineageTag: 73a26e86-384b-4a1f-a5e0-f96f3828c5ba
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 110f8bec-493d-431e-bd83-b715c8286995
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Exit Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4f63fdda-cc67-4aba-a83d-c1d05bdfa29e
+		summarizeBy: none
+		sourceColumn: Exit Date
+
+		variation Variation
+			isDefault
+			relationship: 5c4d9e9a-ef0d-495f-99ab-2a04387296e0
+			defaultHierarchy: LocalDateTable_2d626768-7681-4d65-af92-6febe474c381.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'Employee Sample Data 1' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\G089CXH\Downloads\Employee Sample Data 1.xlsx"), null, true),
+				    #"Employee Sample Data 1_Sheet" = Source{[Item="Employee Sample Data 1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Employee Sample Data 1_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Employee ID", type text}, {"Full Name", type text}, {"Job Title", type text}, {"Department", type text}, {"Business Unit", type text}, {"Gender", type text}, {"Ethnicity", type text}, {"Age", Int64.Type}, {"Hire Date", type date}, {"Annual Salary", Int64.Type}, {"Bonus %", type number}, {"Country", type text}, {"City", type text}, {"Exit Date", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

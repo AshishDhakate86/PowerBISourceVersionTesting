@@ -1,0 +1,163 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "f8c2e3037c80e139c1a6",
+  "position": {
+    "x": 9.6055210305030236,
+    "y": 0,
+    "z": 0,
+    "height": 632.59217072312777,
+    "width": 749.23064037923587,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "Call Code"
+                }
+              },
+              "queryRef": "Tag_Table.Call Code",
+              "nativeQueryRef": "Call Code",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "CI Type"
+                }
+              },
+              "queryRef": "Tag_Table.CI Type",
+              "nativeQueryRef": "CI Type"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "Escalation Status"
+                }
+              },
+              "queryRef": "Tag_Table.Escalation Status",
+              "nativeQueryRef": "Escalation Status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tag_Table"
+                        }
+                      },
+                      "Property": "Open Time(Timezone based)"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Tag_Table.Open Time(Timezone based))",
+              "nativeQueryRef": "Count of Open Time(Timezone based)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5546b4a9ae907a07031e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "Call Code"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a39ef29a8d8d0b5d41d6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "Escalation Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "beaeae132a1018b9695b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "CI Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "142c9ba0874476095032",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tag_Table"
+                  }
+                },
+                "Property": "Open Time(Timezone based)"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

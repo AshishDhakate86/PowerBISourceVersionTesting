@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "b6f760c4405c8c588257",
+  "position": {
+    "x": 9.6055210305030236,
+    "y": 0,
+    "z": 0,
+    "height": 374.61532018961793,
+    "width": 528.30365667766637,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "CI Location"
+                }
+              },
+              "queryRef": "Tag_Table.CI Location",
+              "nativeQueryRef": "CI Location",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tag_Table"
+                        }
+                      },
+                      "Property": "No."
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Tag_Table.No.)",
+              "nativeQueryRef": "Sum of No."
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Tag_Table"
+                      }
+                    },
+                    "Property": "No."
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7ea40367900bd6044bbe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "CI Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "061dd58ce1e73eca847b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tag_Table"
+                  }
+                },
+                "Property": "No."
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
