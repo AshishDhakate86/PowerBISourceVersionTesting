@@ -1,0 +1,30 @@
+relationship 4d5e2a48-da04-4998-b9e1-46c533247c6e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Employee Sample Data 1'.'Hire Date'
+	toColumn: LocalDateTable_845c6a6c-2554-4eb3-be81-3f822e33baad.Date
+
+relationship 5c4d9e9a-ef0d-495f-99ab-2a04387296e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Employee Sample Data 1'.'Exit Date'
+	toColumn: LocalDateTable_2d626768-7681-4d65-af92-6febe474c381.Date
+
+relationship 5deffb6b-903f-435c-9496-83561d108cbf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Tag_Table.'Update Time(Timezone based)'
+	toColumn: LocalDateTable_be16ea84-20a9-4631-a61b-867824cd3287.Date
+
+relationship a271715f-7eab-4064-8c24-fda500567178
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Tag_Table.'Open Time(Timezone based)'
+	toColumn: LocalDateTable_be0ccb85-f33d-4912-9292-3e66715581ad.Date
+
+relationship f0e17a00-4d96-46a3-84ac-c3691fce6ae8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Tag_Table.'Resolve Time(Timezone based)'
+	toColumn: LocalDateTable_256ea9bd-5c7d-4930-934e-87908fbf18de.Date
+
+relationship 06e1e08b-625c-4dd1-b4dc-c5711a630ba4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Tag_Table.'Close Time(Timezone based)'
+	toColumn: LocalDateTable_15d5e5f6-3165-433c-a323-6eed8a1762c8.Date
+
