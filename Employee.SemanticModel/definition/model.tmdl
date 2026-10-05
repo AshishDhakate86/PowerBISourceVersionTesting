@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Employee Sample Data 1","Tag_Table"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Employee Sample Data 1'
+ref table DateTableTemplate_decd519e-08ec-4a26-b7e6-329fee85f78a
+ref table LocalDateTable_845c6a6c-2554-4eb3-be81-3f822e33baad
+ref table LocalDateTable_2d626768-7681-4d65-af92-6febe474c381
+ref table Tag_Table
+ref table LocalDateTable_be16ea84-20a9-4631-a61b-867824cd3287
+ref table LocalDateTable_be0ccb85-f33d-4912-9292-3e66715581ad
+ref table LocalDateTable_256ea9bd-5c7d-4930-934e-87908fbf18de
+ref table LocalDateTable_15d5e5f6-3165-433c-a323-6eed8a1762c8
+
+ref cultureInfo en-US
+

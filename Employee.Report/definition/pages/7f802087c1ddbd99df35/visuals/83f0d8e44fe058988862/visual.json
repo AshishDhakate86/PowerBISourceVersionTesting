@@ -1,0 +1,303 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "83f0d8e44fe058988862",
+  "position": {
+    "x": 10,
+    "y": 512,
+    "z": 1,
+    "height": 208,
+    "width": 803,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "Affected CI ID"
+                }
+              },
+              "queryRef": "Tag_Table.Affected CI ID",
+              "nativeQueryRef": "Affected CI ID",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Tag_Table"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Close Time(Timezone based)"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Year"
+                }
+              },
+              "queryRef": "Tag_Table.Close Time(Timezone based).Variation.Date Hierarchy.Year",
+              "nativeQueryRef": "Close Time(Timezone based) Year",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Tag_Table"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Close Time(Timezone based)"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Quarter"
+                }
+              },
+              "queryRef": "Tag_Table.Close Time(Timezone based).Variation.Date Hierarchy.Quarter",
+              "nativeQueryRef": "Close Time(Timezone based) Quarter",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Tag_Table"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Close Time(Timezone based)"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Month"
+                }
+              },
+              "queryRef": "Tag_Table.Close Time(Timezone based).Variation.Date Hierarchy.Month",
+              "nativeQueryRef": "Close Time(Timezone based) Month",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Tag_Table"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Close Time(Timezone based)"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Day"
+                }
+              },
+              "queryRef": "Tag_Table.Close Time(Timezone based).Variation.Date Hierarchy.Day",
+              "nativeQueryRef": "Close Time(Timezone based) Day",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tag_Table"
+                        }
+                      },
+                      "Property": "Open Group"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Tag_Table.Open Group)",
+              "nativeQueryRef": "Count of Open Group"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c6a6147474243c480480",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "Affected CI ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a6b7406c8b0da4ee9257",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Tag_Table"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Close Time(Timezone based)"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8ec495411c2c3b940e68",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Tag_Table"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Close Time(Timezone based)"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Quarter"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c1cc5e0010700746253d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Tag_Table"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Close Time(Timezone based)"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f8f0513e21a6e22c9679",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Tag_Table"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Close Time(Timezone based)"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Day"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "75923870efdc3f16751e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tag_Table"
+                  }
+                },
+                "Property": "Open Group"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
