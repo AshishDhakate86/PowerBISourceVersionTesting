@@ -1,0 +1,154 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "50ec7000cac5f2568a7d",
+  "position": {
+    "x": 9.6055210305030236,
+    "y": 57.633126183018142,
+    "z": 0,
+    "height": 312.86554213638419,
+    "width": 509.09261461666028,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "Affected CI ID"
+                }
+              },
+              "queryRef": "Tag_Table.Affected CI ID",
+              "nativeQueryRef": "Affected CI ID",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tag_Table"
+                    }
+                  },
+                  "Property": "Call Code"
+                }
+              },
+              "queryRef": "Tag_Table.Call Code",
+              "nativeQueryRef": "Call Code"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tag_Table"
+                        }
+                      },
+                      "Property": "Tag 1"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Tag_Table.Tag 1)",
+              "nativeQueryRef": "Count of Tag 1"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Tag_Table"
+                      }
+                    },
+                    "Property": "Tag 1"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "731049d7a47405748adc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "Affected CI ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fa9b7da9664c3a82b327",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tag_Table"
+              }
+            },
+            "Property": "Call Code"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "025207246a574272ef2f",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tag_Table"
+                  }
+                },
+                "Property": "Tag 1"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
