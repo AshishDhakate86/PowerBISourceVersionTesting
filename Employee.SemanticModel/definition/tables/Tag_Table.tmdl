@@ -1,0 +1,398 @@
+table Tag_Table
+	lineageTag: af7c96a1-12e5-4a7f-86d5-1d8140fb72ce
+
+	column 'No.'
+		dataType: int64
+		formatString: 0
+		lineageTag: e6ef7442-1431-40a6-a9ef-08a6a790c008
+		summarizeBy: sum
+		sourceColumn: No.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Request ID'
+		dataType: string
+		lineageTag: 4115b86d-75d8-4755-a276-c71ad89e6876
+		summarizeBy: none
+		sourceColumn: Request ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 513efe79-c670-4924-8ae2-00090517f297
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 15847ab7-891e-44b9-8784-440dd74b6ec0
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assignment Group'
+		dataType: string
+		lineageTag: fd8d018a-8b8b-4bc4-a5f1-5fcaebc34736
+		summarizeBy: none
+		sourceColumn: Assignment Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Template ID'
+		dataType: string
+		lineageTag: 59eb527c-9d3c-47c8-abd3-c8787565e1e5
+		summarizeBy: none
+		sourceColumn: Template ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complexity
+		dataType: int64
+		formatString: 0
+		lineageTag: 1eba9c7c-0192-490c-9fe7-146412f0a65a
+		summarizeBy: sum
+		sourceColumn: Complexity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Update Time(Timezone based)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 719f9b19-1bf7-45be-a4ba-f61cd7afe292
+		summarizeBy: none
+		sourceColumn: Update Time(Timezone based)
+
+		variation Variation
+			isDefault
+			relationship: 5deffb6b-903f-435c-9496-83561d108cbf
+			defaultHierarchy: LocalDateTable_be16ea84-20a9-4631-a61b-867824cd3287.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Update Group'
+		dataType: string
+		lineageTag: 75de3c0e-f526-4f09-9c96-9d0f0ea68de4
+		summarizeBy: none
+		sourceColumn: Update Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Open Time(Timezone based)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a62bd007-bede-4542-94e0-0cd52cb3a371
+		summarizeBy: none
+		sourceColumn: Open Time(Timezone based)
+
+		variation Variation
+			isDefault
+			relationship: a271715f-7eab-4064-8c24-fda500567178
+			defaultHierarchy: LocalDateTable_be0ccb85-f33d-4912-9292-3e66715581ad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Open Group'
+		dataType: string
+		lineageTag: 82ec32ed-3c12-4320-8a38-2d6a61644b12
+		summarizeBy: none
+		sourceColumn: Open Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Resolve Time(Timezone based)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 22173740-67c1-4fbf-b790-61a7b245928c
+		summarizeBy: none
+		sourceColumn: Resolve Time(Timezone based)
+
+		variation Variation
+			isDefault
+			relationship: f0e17a00-4d96-46a3-84ac-c3691fce6ae8
+			defaultHierarchy: LocalDateTable_256ea9bd-5c7d-4930-934e-87908fbf18de.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Resolve Group'
+		dataType: string
+		lineageTag: ff530dd7-662d-4a8b-97d9-b355bfd16536
+		summarizeBy: none
+		sourceColumn: Resolve Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Close Time(Timezone based)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 66c95d5b-3ced-43e3-a662-65362b56d8d6
+		summarizeBy: none
+		sourceColumn: Close Time(Timezone based)
+
+		variation Variation
+			isDefault
+			relationship: 06e1e08b-625c-4dd1-b4dc-c5711a630ba4
+			defaultHierarchy: LocalDateTable_15d5e5f6-3165-433c-a323-6eed8a1762c8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Close Group'
+		dataType: string
+		lineageTag: 9fd0b4af-aaeb-4031-abc6-0cb48e40aa16
+		summarizeBy: none
+		sourceColumn: Close Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reported CI Name'
+		dataType: string
+		lineageTag: 1c04d081-fa93-4418-9ee0-e988c9167c71
+		summarizeBy: none
+		sourceColumn: Reported CI Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reported CI ID'
+		dataType: string
+		lineageTag: 261c7de5-67b8-434c-98c0-b12e5c8ad031
+		summarizeBy: none
+		sourceColumn: Reported CI ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CI Type'
+		dataType: string
+		lineageTag: c53e6913-eb08-4a52-b15f-991bc2d15dce
+		summarizeBy: none
+		sourceColumn: CI Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CI Subtype'
+		dataType: string
+		lineageTag: b20e45b0-d610-4a0c-a2e2-a548b4ef6273
+		summarizeBy: none
+		sourceColumn: CI Subtype
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CI Location'
+		dataType: string
+		lineageTag: 1c6aafd1-7f57-49e3-9772-edaff87469c9
+		summarizeBy: none
+		sourceColumn: CI Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CI Environment'
+		dataType: string
+		lineageTag: 6dea3b27-f321-489a-bf83-26f56095a0cb
+		summarizeBy: none
+		sourceColumn: CI Environment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Affected CI Name'
+		dataType: string
+		lineageTag: 9b4b6058-0fda-4349-86cd-0d8efa8db9f4
+		summarizeBy: none
+		sourceColumn: Affected CI Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Affected CI ID'
+		dataType: string
+		lineageTag: ba9c613b-ac10-4225-bb9a-20aa253289ff
+		summarizeBy: none
+		sourceColumn: Affected CI ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CI Location_1'
+		dataType: string
+		lineageTag: 6a65c14d-d1f2-4dd9-912c-5d1c49f167e9
+		summarizeBy: none
+		sourceColumn: CI Location_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CI Environment_2'
+		dataType: string
+		lineageTag: ec8a4c8d-0d09-44e0-a248-336be1dd46b3
+		summarizeBy: none
+		sourceColumn: CI Environment_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Knowledge Candidate CI ID'
+		dataType: string
+		lineageTag: f4b16168-d5cf-4d73-aea7-876344735c2b
+		summarizeBy: none
+		sourceColumn: Knowledge Candidate CI ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Escalation Status'
+		dataType: string
+		lineageTag: b1bee47c-8816-4e2b-89ed-35d391779616
+		summarizeBy: none
+		sourceColumn: Escalation Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Autoclose
+		dataType: string
+		lineageTag: eb3f062e-190f-4ac4-a598-2d9020455ef9
+		summarizeBy: none
+		sourceColumn: Autoclose
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Autoclose by'
+		dataType: string
+		lineageTag: 3d82342e-bfed-4763-824c-f6315a11de1b
+		summarizeBy: none
+		sourceColumn: Autoclose by
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tag 1'
+		dataType: string
+		lineageTag: 70b81b9f-867a-4726-88b9-1df016dd6c6b
+		summarizeBy: none
+		sourceColumn: Tag 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tag 2'
+		dataType: string
+		lineageTag: 6bb4fb86-c0df-4a34-87b9-a64f59d53962
+		summarizeBy: none
+		sourceColumn: Tag 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tag 3'
+		dataType: string
+		lineageTag: 53500e8b-a6c2-40a3-b217-f0b2b02302a6
+		summarizeBy: none
+		sourceColumn: Tag 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tag 4'
+		dataType: string
+		lineageTag: 67d87241-5d2c-4697-80d6-3c932abefd47
+		summarizeBy: none
+		sourceColumn: Tag 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tag 5'
+		dataType: string
+		lineageTag: 0dec3ba0-f785-4c31-8aec-5a12aeee08a5
+		summarizeBy: none
+		sourceColumn: Tag 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tag 6'
+		dataType: string
+		lineageTag: bb636a26-d6c4-433b-a080-1d40b2ad58c7
+		summarizeBy: none
+		sourceColumn: Tag 6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Call Code'
+		dataType: string
+		lineageTag: 6e472d79-6dc2-4193-b009-dc2543291062
+		summarizeBy: none
+		sourceColumn: Call Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reported Time(Timezone based)'
+		dataType: string
+		lineageTag: a133fa0f-50d4-4c82-b4c0-74f642507b59
+		summarizeBy: none
+		sourceColumn: Reported Time(Timezone based)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Solution ID'
+		dataType: string
+		lineageTag: 2010d0f6-7468-4b31-8ba4-4e90c270fb8d
+		summarizeBy: none
+		sourceColumn: Solution ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Opened by Interface'
+		dataType: string
+		lineageTag: 945a4775-4306-4ab9-bf93-8bb5ee56d525
+		summarizeBy: none
+		sourceColumn: Opened by Interface
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Interface Takeover Time (Timezone based)'
+		dataType: string
+		lineageTag: 2fadbc91-992f-48a4-827a-35c6532ffe9b
+		summarizeBy: none
+		sourceColumn: Interface Takeover Time (Timezone based)
+
+		annotation SummarizationSetBy = Automatic
+
+	column External
+		dataType: string
+		lineageTag: b29e6062-7e12-4fdb-a733-f7f21ed020cd
+		summarizeBy: none
+		sourceColumn: External
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reference ID'
+		dataType: string
+		lineageTag: e964dbc0-8501-4978-bbeb-e9adc74c13af
+		summarizeBy: none
+		sourceColumn: Reference ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reported by Location'
+		dataType: string
+		lineageTag: 6734820d-d3ab-4b4d-a42e-79de6db2ac84
+		summarizeBy: none
+		sourceColumn: Reported by Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reported by Department'
+		dataType: string
+		lineageTag: 8a9541ab-33ea-4831-b33e-2f9999848aa7
+		summarizeBy: none
+		sourceColumn: Reported by Department
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tag_Table = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://volkswagengroup.sharepoint.com/sites/ITInfraDashboardDev", [ApiVersion = 15]),
+				    #"Request tag code data- Oct xlsx_https://volkswagengroup sharepoint com/sites/ITInfraDashboardDev/Shared Documents/IT Infra/Request_Tag_Code/" = Source{[Name="Request tag code data- Oct.xlsx",#"Folder Path"="https://volkswagengroup.sharepoint.com/sites/ITInfraDashboardDev/Shared Documents/IT Infra/Request_Tag_Code/"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"Request tag code data- Oct xlsx_https://volkswagengroup sharepoint com/sites/ITInfraDashboardDev/Shared Documents/IT Infra/Request_Tag_Code/"),
+				    Sheet1_Sheet = #"Imported Excel Workbook"{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"No.", Int64.Type}, {"Request ID", type text}, {"Title", type text}, {"Status", type text}, {"Assignment Group", type text}, {"Template ID", type text}, {"Complexity", Int64.Type}, {"Update Time#(lf)(Timezone based)", type datetime}, {"Update Group", type text}, {"Open Time#(lf)(Timezone based)", type datetime}, {"Open Group", type text}, {"Resolve Time#(lf)(Timezone based)", type datetime}, {"Resolve Group", type text}, {"Close Time#(lf)(Timezone based)", type datetime}, {"Close Group", type text}, {"Reported CI Name", type text}, {"Reported CI ID", type text}, {"CI Type", type text}, {"CI Subtype", type text}, {"CI Location", type text}, {"CI Environment", type text}, {"Affected CI Name", type text}, {"Affected CI ID", type text}, {"CI Location_1", type text}, {"CI Environment_2", type text}, {"Knowledge Candidate CI ID", type text}, {"Escalation Status", type text}, {"Autoclose", type text}, {"Autoclose by", type text}, {"Tag 1", type text}, {"Tag 2", type text}, {"Tag 3", type text}, {"Tag 4", type text}, {"Tag 5", type text}, {"Tag 6", type text}, {"Call Code", type text}, {"Reported Time#(lf)(Timezone based)", type text}, {"Solution ID", type text}, {"Opened by Interface", type text}, {"Interface Takeover Time (Timezone based)", type text}, {"External", type text}, {"Reference ID", type text}, {"Reported by Location", type text}, {"Reported by Department", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
